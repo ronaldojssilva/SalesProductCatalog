@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Domain.Entities
 {
-    public sealed class Category
+    public sealed class Category : Entity
     {
-        public int Id { get; private set; }
         public string Name { get; private set; }
         public ICollection<Product> Products { get; private set; }
 
@@ -22,6 +21,11 @@ namespace CleanArch.Domain.Entities
         {
             DomainExceptionValidation.When(id < 0, "Invalid Id value.");
             Id = id;
+            ValidateDomain(name);
+        }
+
+        public void Update(string name)
+        {
             ValidateDomain(name);
         }
 
