@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Domain.Validation
 {
-    internal class DomainExceptionValidation : Exception
+    public class DomainExceptionValidation : Exception
     {
         public DomainExceptionValidation(string error) : base(error) { }
 
