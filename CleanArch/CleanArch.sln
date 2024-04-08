@@ -26,6 +26,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArch.WebUI", "CleanArc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Tests", "CleanArch.Tests\CleanArch.Tests.csproj", "{D8410AD4-83D0-44A1-A421-69E31AEA86D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{7B635365-A58E-4771-92D3-43CBE6E618C4}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\01-Estrutura do projeto.jpg = Doc\01-Estrutura do projeto.jpg
+		Doc\02-Relacionamento e dependência entre os projetos.jpg = Doc\02-Relacionamento e dependência entre os projetos.jpg
+		Doc\03-Componentes distribuidos por camada e responsabilidade.jpg = Doc\03-Componentes distribuidos por camada e responsabilidade.jpg
+		Doc\domain 01.jpg = Doc\domain 01.jpg
+		Doc\domain 02.jpg = Doc\domain 02.jpg
+		Doc\domain 03.jpg = Doc\domain 03.jpg
+		Doc\Infra.Data 01.jpg = Doc\Infra.Data 01.jpg
+		Doc\Infra.Data 02.jpg = Doc\Infra.Data 02.jpg
+		Doc\Infra.Data 03.jpg = Doc\Infra.Data 03.jpg
+		Doc\Infra.Data 04.jpg = Doc\Infra.Data 04.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
