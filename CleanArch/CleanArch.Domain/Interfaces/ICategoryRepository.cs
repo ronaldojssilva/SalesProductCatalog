@@ -4,7 +4,7 @@ namespace CleanArch.Domain.Validation
 {
     public interface ICategoryRepository
     {
-        Task<IEnumerable<Category>> GetCatories();
+        Task<IEnumerable<Category>> GetCategories();
         Task<Category> GetById(int? id);
 
         Task<Category> Create(Category category);
