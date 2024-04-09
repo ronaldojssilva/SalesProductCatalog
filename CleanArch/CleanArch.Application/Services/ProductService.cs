@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CleanArch.Application.DTOs;
+using CleanArch.Application.Products.Queries;
 using CleanArch.Domain.Entities;
 using CleanArch.Domain.Interfaces;
 using MediatR;
@@ -25,8 +26,14 @@ namespace CleanArch.Application.Interfaces
 
         public async Task<IEnumerable<ProductDTO>> GetProducts()
         {
-            var productsEntity = await _productRepository.GetProductsAsync();
-            return _mapper.Map<IEnumerable<ProductDTO>>(productsEntity);
+            var productsQuery = new GetProductsQuery();
+
+            if (productsQuery == null)
+                throw new Exception($"Entity could not be loaded.");
+
+            var result = await _mediator.Send(productsQuery);
+
+            return _mapper.Map<IEnumerable<ProductDTO>>(result);
         }
 
         //public async Task<ProductDTO> GetById(int? id)
