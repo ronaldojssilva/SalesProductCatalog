@@ -1,4 +1,6 @@
-﻿using CleanArch.Domain.Validation;
+﻿using CleanArch.Application.Interfaces;
+using CleanArch.Application.Mappings;
+using CleanArch.Domain.Validation;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -13,11 +15,15 @@ namespace CleanArch.Infra.IoC
             IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"
-            ), b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"
+           ), b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
             return services;
         }
