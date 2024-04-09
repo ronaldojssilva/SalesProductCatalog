@@ -92,6 +92,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{7B635365-A58
 		Doc\Infra.Data 10.jpg = Doc\Infra.Data 10.jpg
 		Doc\WebUI 01.jpg = Doc\WebUI 01.jpg
 		Doc\WebUI 02.jpg = Doc\WebUI 02.jpg
+		Doc\WebUI 03.jpg = Doc\WebUI 03.jpg
+		Doc\WebUI 04.jpg = Doc\WebUI 04.jpg
+		Doc\WebUI 05.jpg = Doc\WebUI 05.jpg
 	EndProjectSection
 EndProject
 Global
