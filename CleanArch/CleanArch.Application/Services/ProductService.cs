@@ -41,17 +41,17 @@ namespace CleanArch.Application.Interfaces
             return _mapper.Map<ProductDTO>(productEntity);
         }
 
-        public async Task<ProductDTO> GetProductCategory(int? id)
-        {
-            var productByIdQuery = new GetProductByIdQuery(id.Value);
+        //public async Task<ProductDTO> GetProductCategory(int? id)
+        //{
+        //    var productByIdQuery = new GetProductByIdQuery(id.Value);
 
-            if (productByIdQuery == null)
-                throw new Exception($"Entity could not be loaded.");
+        //    if (productByIdQuery == null)
+        //        throw new Exception($"Entity could not be loaded.");
 
-            var productEntity = await _mediator.Send(productByIdQuery);
+        //    var productEntity = await _mediator.Send(productByIdQuery);
 
-            return _mapper.Map<ProductDTO>(productEntity);
-        }
+        //    return _mapper.Map<ProductDTO>(productEntity);
+        //}
 
         public async Task Add(ProductDTO productDto)
         {
