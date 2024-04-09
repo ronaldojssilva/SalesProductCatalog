@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArch.Domain.Validation
+namespace CleanArch.Domain.Interfaces
 {
     public interface IProductRepository
     {

@@ -1,6 +1,6 @@
 ﻿using CleanArch.Domain.Entities;
 
-namespace CleanArch.Domain.Validation
+namespace CleanArch.Domain.Interfaces
 {
     public interface ICategoryRepository
     {

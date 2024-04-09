@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CleanArch.Application.DTOs;
 using CleanArch.Domain.Entities;
-using CleanArch.Domain.Validation;
+using CleanArch.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

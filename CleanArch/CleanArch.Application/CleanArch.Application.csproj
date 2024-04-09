@@ -15,8 +15,4 @@
     <ProjectReference Include="..\CleanArch.Domain\CleanArch.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Products\Handlers\" />
-  </ItemGroup>
-
 </Project>

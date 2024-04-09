@@ -1,6 +1,6 @@
 ﻿using CleanArch.Application.Interfaces;
 using CleanArch.Application.Mappings;
-using CleanArch.Domain.Validation;
+using CleanArch.Domain.Interfaces;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;

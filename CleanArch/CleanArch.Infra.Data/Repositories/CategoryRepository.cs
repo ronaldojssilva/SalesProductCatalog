@@ -1,5 +1,5 @@
 ﻿using CleanArch.Domain.Entities;
-using CleanArch.Domain.Validation;
+using CleanArch.Domain.Interfaces;
 using CleanArch.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
