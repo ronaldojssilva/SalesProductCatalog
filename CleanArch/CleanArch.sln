@@ -114,6 +114,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{7B635365-A58
 		Doc\WebUI 22.jpg = Doc\WebUI 22.jpg
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.API", "CleanArch.API\CleanArch.API.csproj", "{A246F04C-F6C9-4A3E-934F-76A7AD250557}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,6 +146,10 @@ Global
 		{D8410AD4-83D0-44A1-A421-69E31AEA86D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8410AD4-83D0-44A1-A421-69E31AEA86D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8410AD4-83D0-44A1-A421-69E31AEA86D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A246F04C-F6C9-4A3E-934F-76A7AD250557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A246F04C-F6C9-4A3E-934F-76A7AD250557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A246F04C-F6C9-4A3E-934F-76A7AD250557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A246F04C-F6C9-4A3E-934F-76A7AD250557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
