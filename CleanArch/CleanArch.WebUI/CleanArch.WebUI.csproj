@@ -10,4 +10,8 @@
     <ProjectReference Include="..\CleanArch.IoC\CleanArch.Infra.IoC.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>
