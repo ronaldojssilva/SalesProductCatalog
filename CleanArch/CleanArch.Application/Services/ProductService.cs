@@ -53,10 +53,11 @@ namespace CleanArch.Application.Interfaces
         //    return _mapper.Map<ProductDTO>(productEntity);
         //}
 
-        public async Task Add(ProductDTO productDto)
+        public async Task<ProductDTO> Add(ProductDTO productDto)
         {
             var productCreateCommand = _mapper.Map<ProductCreateCommand>(productDto);
-            await _mediator.Send(productCreateCommand);
+            var product = await _mediator.Send(productCreateCommand);
+            return _mapper.Map<ProductDTO>(product);
         }
 
         public async Task Update(ProductDTO productDto)

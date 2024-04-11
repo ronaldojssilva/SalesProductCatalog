@@ -1,4 +1,5 @@
 using CleanArch.Infra.IoC;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,20 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureAPI(builder.Configuration);
+//Solução 1 para tratar de referencia ciclica entre produto e categoria
+//Passa a incluir metadados $id e $ref na exibição do json
+//builder.Services.AddControllers().AddJsonOptions(options =>
+//    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve
+//);
+
+//Solução 2 para tratar de referencia ciclica entre produto e categoria
+//adicionar pacote Microsoft.AspNetCore.Mvc.NewtonsoftJson
+builder.Services.AddControllers().AddNewtonsoftJson(x =>
+  x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+//Solução 3 para tratar de referencia ciclica entre produto e categoria
+//Adicionar [JsonIgnore] na propriedade Category de ProductDTO
+
 
 var app = builder.Build();
 
