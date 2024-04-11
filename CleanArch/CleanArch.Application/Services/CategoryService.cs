@@ -32,10 +32,11 @@ namespace CleanArch.Application.Interfaces
             return _mapper.Map<CategoryDTO>(categoryEntity);
         }
 
-        public async Task Add(CategoryDTO categoryDto)
+        public async Task<CategoryDTO> Add(CategoryDTO categoryDto)
         {
             var categoryEntity = _mapper.Map<Category>(categoryDto);
-            await _categoryRepository.Create(categoryEntity);
+            var category = await _categoryRepository.Create(categoryEntity);
+            return _mapper.Map<CategoryDTO>(categoryEntity);
         }
 
         public async Task Update(CategoryDTO categoryDto)
