@@ -8,8 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureAPI(builder.Configuration);
+builder.Services.AddInfrastructureJWT(builder.Configuration);
+builder.Services.AddInfrastructureSwagger();
+
+//tratar retorno dos objetos json
 //Solução 1 para tratar de referencia ciclica entre produto e categoria
 //Passa a incluir metadados $id e $ref na exibição do json
 //builder.Services.AddControllers().AddJsonOptions(options =>
@@ -36,6 +39,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseStatusCodePages();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
